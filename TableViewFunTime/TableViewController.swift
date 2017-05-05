@@ -48,8 +48,8 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return favoriteSongs.count
+        return 5 
+        //return favoriteSongs.count
         
     }
 
@@ -58,7 +58,7 @@ class TableViewController: UITableViewController {
                 
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
 
-        let favoriteSong = favoriteSongs[(indexPath as NSIndexPath).row]
+        let favoriteSong = favoriteSongs[indexPath.row]
         
         cell.textLabel?.text = favoriteSong
 
